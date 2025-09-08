@@ -24,7 +24,7 @@ The following pipeline will be used to design and evaluate new nanobody variants
 
 *   **Tool:** [SEPPA 3.0](http://www.badd-cao.net/seppa3/) (Web Server)
 *   **Purpose:** To predict potential epitopes on the surface of the target protein. These regions are likely to be involved in protein-protein interactions and are therefore good candidates for targeting.
-*   **Instructions:** Upload your target PDB file (`[PATH/TO/CDKL5_target.pdb]` or your own) to the SEPPA 3.0 web server to get the predictions.
+*   **Instructions:** Upload your target PDB file (`[PATH/TO/CDKL5_target.pdb]` or your own) and provide the chain ID letter (i.e., A) of your target to the SEPPA 3.0 web server to get the predictions.
 
 ### 2. Nanobody CDRs Design
 
