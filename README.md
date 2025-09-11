@@ -16,7 +16,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Target:** You can use an arbitrary protein structure (in PDB format) of your choice.
     *   **Example Target:** The catalytic domain of CDKL5, provided in `[./Example_input/Target.pdb]`.
 *   **Scaffold:** A pre-selected nanobody structure is provided to serve as the starting point for the design.
-    *   **Scaffold File:** `[./Example_input/nanobody_scaffold.pdb]`
+    *   **Scaffold File:** `[./Example_input/nanobody_scaffold.pdb](./Example_input/nanobody_scaffold.pdb)`
 
 ## Design Pipeline
 
@@ -26,12 +26,12 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Purpose:** This analysis serves two main purposes:
     *   To predict potential epitopes on the surface of the target protein. These regions must have a sufficient area to be involved in protein-protein interactions and with hydrophobic propensity, as these features are ideal for *de novo* targeting.
     *   To identify and extract the complementary-determining regions (CDRs) from nanobody sequences.
-*   **Instructions:** Run [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb) to start with 1_Preparation_colab.ipynb. You need the **Target** and **Scaffold** PDB files 
+*   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb)
 
-### 2. Nanobody CDRs Design
+### 2. *Nanobody de novo* CDRs Design
 
-*   **Tool:** RFAntibody
-*   **Colab Notebook:** [`[1_RFAntibody_Design.ipynb]`]([LINK_TO_YOUR_COLAB_NOTEBOOK_1])
+*   **Tool:** RFantibody
+*   **Colab Notebook:** [`[1_RFAntibody_Design.ipynb]`]([LINK_TO_YOUR_COLAB_NOTEBOOK_1])   
 *   **Purpose:** To design alternative nanobody structures by modifying the Complementarity-Determining Regions (CDRs). The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target.
 
 ### 3. Side-Chain Reconstruction
