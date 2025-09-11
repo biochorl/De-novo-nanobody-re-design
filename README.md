@@ -26,7 +26,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Purpose:** This analysis serves two main purposes:
     *   To predict potential epitopes on the surface of the target protein. These regions must have a sufficient area to be involved in protein-protein interactions and with hydrophobic propensity, as these features are ideal for *de novo* targeting.
     *   To identify and extract the complementary-determining regions (CDRs) from nanobody sequences.
-*   **Instructions:** Run [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb). You need the **Target** and **Scaffold** PDB files 
+*   **Instructions:** Run [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb) to start with 1_Preparation_colab.ipynb. You need the **Target** and **Scaffold** PDB files 
 
 ### 2. Nanobody CDRs Design
 
