@@ -16,7 +16,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Target:** You can use an arbitrary protein structure (in PDB format) of your choice.
     *   **Example Target:** The catalytic domain of CDKL5, provided in `[./Example_input/Target.pdb]`.
 *   **Scaffold:** A pre-selected nanobody structure is provided to serve as the starting point for the design.
-    *   **Scaffold File:** `[Dowload](https://github.com/margio91/De-novo-nanobody-re-design/blob/main/Example_input/nanobody_scaffold.pdb)`
+    *   **Scaffold File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/nanobody_scaffold.pdb)
 
 ## Design Pipeline
 
