@@ -16,10 +16,10 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 ## Target and Scaffold Files
 
-*   **Target:** You can use an arbitrary protein structure (in PDB format) of your choice.
-    *   **Target File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/Target.pdb).
-*   **Scaffold:** A pre-selected nanobody structure is provided to serve as the starting point for the design.
-    *   **Scaffold File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/nanobody_scaffold.pdb)
+*   **Target:** An arbitrary protein structure (in PDB format) of your choice.
+    *   **Example Target File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/7z1b.pdb).
+*   **Scaffold:** A pre-selected nanobody structure to serve as the starting point for the (re)design.
+    *   **Example nanobody scaffold File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/nanobody_scaffold.pdb)
 ---
 
 ## Design Pipeline
