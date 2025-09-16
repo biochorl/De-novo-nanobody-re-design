@@ -14,7 +14,7 @@ This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 
 The workshop starts from the 3D structure of two input PDBs, one of the target and one of the scaffold nanobody. Most of the steps are performed using Google Colab notebooks, provided in this repository.
 
-**Note on File Access:** The links to files in this README (like `7z1b.pdb`) are relative paths. If you click on them in a browser while logged into GitHub with access to this repository, you will see the file's content. To use the file, you will need to manually click the "Download raw file" <img src="Images/Download_symbol.png" alt="Download button" width="20"/> top-right button on the file viewer page.
+**Note on File Access:** The links to files in this README (like `7z1b.pdb`) are relative paths. If you click on them in a browser while logged into GitHub with access to this repository, you will see the file's content. To use the file, you will need to manually click the "Download raw file" <img src="Images/Download_symbol.png" alt="Download button" width="40"/> top-right button on the file viewer page.
 
 ## Target and Scaffold Files
 
