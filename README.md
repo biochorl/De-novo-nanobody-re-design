@@ -1,4 +1,4 @@
-<div style="background-image: url('Images/Background.avif');">
+<img src="Images/Background.png" alt="background" width="100%"/>
 
 # *De Novo* Nanobody Design Workshop
 
@@ -91,5 +91,3 @@ Most of the Google colaboratories were developed by customizing other colabs, re
 ## Contact
 
 For any questions, suggestions, or issues, please open an issue in this GitHub repository or contact me at [marco.orlando1991@live.it](mailto:marco.orlando1991@live.it) or [marco.orlando1991@ung.si](mailto:marco.orlando1991@ung.si).
-
-</div>
