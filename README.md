@@ -17,17 +17,9 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 ## Target and Scaffold Files
 
 *   **Target:** An arbitrary protein structure (in PDB format) of your choice.
-    *   **Example Target File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/7z1b.pdb).
-    > **Note:** If this repository is private, you will need to use a personal access token to download the file.
-    > ```bash
-    > curl -H "Authorization: token <YOUR_PERSONAL_ACCESS_TOKEN>" -L -o 7z1b.pdb https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/7z1b.pdb
-    > ```
+    *   **Example Target File:** [7z1b.pdb](./Example_input/7z1b.pdb)
 *   **Scaffold:** A pre-selected nanobody structure to serve as the starting point for the (re)design.
-    *   **Example nanobody scaffold File:** [Download](https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/nanobody_scaffold.pdb)
-    > **Note:** If this repository is private, you will need to use a personal access token to download the file.
-    > ```bash
-    > curl -H "Authorization: token <YOUR_PERSONAL_ACCESS_TOKEN>" -L -o nanobody_scaffold.pdb https://raw.githubusercontent.com/margio91/De-novo-nanobody-re-design/main/Example_input/nanobody_scaffold.pdb
-    > ```
+    *   **Example nanobody scaffold File:** [nanobody_scaffold.pdb](./Example_input/nanobody_scaffold.pdb)
 ---
 
 ## Design Pipeline
