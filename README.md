@@ -14,6 +14,29 @@ This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 
 The workshop starts from the 3D structure of two input PDBs, one of the target and one of the scaffold nanobody. Most of the steps are performed using Google Colab notebooks, provided in this repository.
 
+## Accessing Workshop Files
+
+The links to files like `7z1b.pdb` in this README are relative paths within the repository. If you are working with a local copy, these links will work as expected.
+
+However, if you are in an environment like Google Colab and need to download these files, you cannot use the relative paths directly. If this repository is private, you should first clone it into your environment.
+
+**Cloning the Repository:**
+
+Use the following command in your terminal or a Colab code cell:
+
+```bash
+!git clone https://github.com/margio91/De-novo-nanobody-re-design.git
+```
+
+If the repository is private, you'll need to include a Personal Access Token (PAT) in the URL:
+
+```bash
+# Replace <YOUR_PAT> with your GitHub Personal Access Token
+!git clone https://<YOUR_PAT>@github.com/margio91/De-novo-nanobody-re-design.git
+```
+
+After cloning, you can access all files using their paths relative to the repository root (e.g., `De-novo-nanobody-re-design/Example_input/7z1b.pdb`).
+
 ## Target and Scaffold Files
 
 *   **Target:** An arbitrary protein structure (in PDB format) of your choice.
