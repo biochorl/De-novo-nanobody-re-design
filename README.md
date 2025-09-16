@@ -1,10 +1,11 @@
 <img src="Images/Background.png" alt="background" width="100%"/>
+[Background image source](https://www.independent.co.uk/travel/europe/slovenia/nova-gorica-slovenia-italy-capital-of-culture-b2712344.html)
 
 # *De Novo* Nanobody Design Workshop
 
 This repository contains the computational workflow for the *de novo* (re)design of a nanobody to specific target protein of interest.
-The pipeline is developed to use Google Colab resources and adequate for people with little knowledge on protein *de novo* design tools and limited structural biology background.
-It is actually made for demonstraction and teaching, and not adequate to scale for a production-level *in silico* screening 
+The pipeline is developed to use Google Colab resources and it is adequate for people with little knowledge on protein *de novo* design tools and limited structural biology background.
+It is actually made for demonstration and teaching, while being not adequate to scale for a production-level *in silico* screening 
 
 This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 *   **Event Link:** [https://indico.ijs.si/event/2966/](https://indico.ijs.si/event/2966/)
@@ -24,6 +25,21 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 ## Design Pipeline
 
 ### 1. Candidate epitopes Prediction and nanobody CDRs identification
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Images/Image_target_patches_detection.png" alt="Fetching target antigen patches" width="400"/>
+      <br>
+      <em>Fetching target antigen patches</em>
+    </td>
+    <td align="center">
+      <img src="Images/Image_CDRs_detection.png" alt="Fetching nanobody complementary determining regions (CDRs)" width="400"/>
+      <br>
+      <em>Fetching nanobody complementary determining regions (CDRs)</em>
+    </td>
+  </tr>
+</table>
 
 *   **Tools:** [Quilt](https://github.com/plijnzaad/quilt) and [Nanocdr-x](https://github.com/lescailab/nanocdr-x)
 *   **Purpose:** This analysis serves two main purposes:
