@@ -879,6 +879,7 @@ ATOM    878  O   SER H 117     -23.891  45.125  15.094  1.00 88.06           O
 ATOM    879  CB  SER H 117     -22.250  44.156  17.750  1.00 88.06           C  
 ATOM    880  OG  SER H 117     -22.625  45.531  17.844  1.00 88.06           O  
 TER   
+END
 REMARK PDBinfo-LABEL:   28 H1
 REMARK PDBinfo-LABEL:   29 H1
 REMARK PDBinfo-LABEL:   30 H1
