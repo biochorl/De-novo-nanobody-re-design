@@ -60,10 +60,12 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     <td align="center">
       <img src="Images/RFDiffusion_sample_image.gif" alt="RFDiffusion sampling for binder design" width="400"/>
       <br>
-      <em>RFDiffusion sampling for binder design, [image source](https://www.kjfold.com/en/category/83.html)</em>
+      <em>RFDiffusion sampling for binder design</em>
     </td>
   </tr>
 </table>
+
+[image source](https://www.kjfold.com/en/category/83.html)
 
 *   **Tool:** RFantibody [paper link](https://www.biorxiv.org/content/10.1101/2024.03.14.585103v2)
 *   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. You have the possibility also to annotate nanobody residues (but not side-chains!) potentially involved in contacts with the epitope.
