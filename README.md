@@ -58,7 +58,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 <table>
   <tr>
     <td align="center">
-      <img src="Images/RFDiffusion_sample_image.gif" alt="RFDiffusion sampling for binder design" width="400"/>
+      <img src="Images/RFDiffusion_sample_image.gif" alt="RFDiffusion sampling for binder design" width="600"/>
       <br>
       <em>RFDiffusion sampling for binder design</em>
     </td>
