@@ -81,10 +81,12 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     <td align="center">
       <img src="Images/PocketGen.gif" alt="Structure-based sequence design" width="400"/>
       <br>
-      <em>An example of structure-based sequence design, [image source](https://github.com/zaixizhang/PocketGen)</em>
+      <em>An example of structure-based sequence design</em>
     </td>
   </tr>
 </table>
+
+[image source](https://github.com/zaixizhang/PocketGen)
 
 *   **Tool:** ProteinMPNN [paper link](https://www.science.org/doi/10.1126/science.add2187)
 *   **Purpose:** To reconstruct the sequence of CDRs and FWs regions at the nanobody-target interface. This step is necessary to rebuild a 3D model, as RFantibody masks interfacial residues as glycines (it is focused on backbone reconstruction, it did not generate full atoms models!).
@@ -95,6 +97,18 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 ### 4. Side-chain packing of ProteinMPNN optimized design
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="Images/pippack_architecture.png" alt="Side-chain packing" width="400"/>
+      <br>
+      <em>Building side-chain atoms and pack them (predict torsion chi angles)</em>
+    </td>
+  </tr>
+</table>
+
+[image source](https://onlinelibrary.wiley.com/doi/10.1002/prot.26705)
+
 *   **Tool:** PIPPack [paper link](https://onlinelibrary.wiley.com/doi/10.1002/prot.26705)
 *   **Purpose:** To build and optimize the side-chains atoms of the ProteinMPNN optimized design.
 *   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4.PIPPack_colab.ipynb)
@@ -104,6 +118,18 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 ### 5. CDRs Sequence Reconstruction with a CDR-specialized model
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="Images/AntiFold.jpeg" alt="CDRs sequence optimization" width="400"/>
+      <br>
+      <em>CDRs sequence optimization</em>
+    </td>
+  </tr>
+</table>
+
+[image source](https://doi.org/10.1093/bioadv/vbae202)
+
 *   **Tool:** AntiFold [paper link](https://academic.oup.com/bioinformaticsadvances/article/5/1/vbae202/8090019)
 *   **Purpose:** To reconstruct the sequence of CDRs regions with a CDR-specialized model. This step is necessary to get the final nanobody design sequence to build a final 3D model with optimized CDRs.
 *   **Colab Notebook:** [![5_Antifold_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/5_Antifold_colab.ipynb)
@@ -112,6 +138,18 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 
 ### 6. Complex Reprediction for Quality Assessment
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Images/GapTrick.png" alt="Example of unmasking AlphaFold template information over protein complexes given at input" width="400"/>
+      <br>
+      <em>Example of unmasking AlphaFold template information over protein complexes given at input</em>
+    </td>
+  </tr>
+</table>
+
+[image source](https://www.nature.com/articles/s41467-024-52951-w)
 
 *   **Tool:** gapTrick [paper link](https://www.biorxiv.org/content/10.1101/2025.01.31.635911v2)
 *   **Purpose:** To use the top scoring AntiFold nanobody sequence for getting the full-atom 3D model of the *de novo* designed nanobody-target complex. This step assesses the quality of the designed interfacial residues and identifies key non-covalent contacts (e.g., hydrophobic contacts, hydrogen bonds, salt bridges) if AlphaFold "thinks" they exist. Inputs are the output of previous step and the PDB output of step 4 ([design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)) that will be used as template to help in the prediction
