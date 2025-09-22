@@ -57,9 +57,9 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 <table>
   <tr>
     <td align="center">
-      <img src="Images/RFDiffusion_sample_image.gif" alt="RFDiffusion sample for CDR design" width="400"/>
+      <img src="Images/RFDiffusion_sample_image.gif" alt="RFDiffusion sampling for binder design" width="400"/>
       <br>
-      <em>RFDiffusion sampling for CDR design</em>
+      <em>RFDiffusion sampling for binder design, [image source](https://www.kjfold.com/en/category/83.html)</em>
     </td>
   </tr>
 </table>
@@ -72,6 +72,16 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     *   **Structure Design:** [Nanobody_Design_0.pdb](./Example_output/Nanobody_Design_0.pdb)
     
 ### 3. Fixed-backbone Sequence reconstruction of nanobody interfacial residues
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Images/PocketGen.gif" alt="Structure-based sequence design" width="400"/>
+      <br>
+      <em>An example of structure-based sequence design, [image source](https://github.com/zaixizhang/PocketGen)</em>
+    </td>
+  </tr>
+</table>
 
 *   **Tool:** ProteinMPNN [paper link](https://www.science.org/doi/10.1126/science.add2187)
 *   **Purpose:** To reconstruct the sequence of CDRs and FWs regions at the nanobody-target interface. This step is necessary to rebuild a 3D model, as RFantibody masks interfacial residues as glycines (it is focused on backbone reconstruction, it did not generate full atoms models!).
