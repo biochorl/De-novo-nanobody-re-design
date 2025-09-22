@@ -48,50 +48,67 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     *   To predict potential epitopes on the surface of the target protein. These regions must have a sufficient area to be involved in protein-protein interactions and with hydrophobic propensity, as these features are ideal for *de novo* targeting.
     *   To identify and extract the complementary-determining regions (CDRs) from nanobody sequences.
 *   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb)
+*   **Example output:** The file containing annotations of target patches and CDRs ("Step_1_annotations.txt") and the input PDB of nanobody with CDRs pre-annotated ("nanobody_scaffold_with_CDRs.pdb").
+    *   **Annotation File:** [Step_1_annotations.txt](./Example_output/Step_1_annotations.txt)
+    *   **Nanobody PDB File:** [Step_1_annotations.txt](./Example_output/nanobody_scaffold_with_CDRs.pdb)
 
 ### 2. *Nanobody de novo* CDRs Design
 
 *   **Tool:** RFantibody [paper link](https://www.biorxiv.org/content/10.1101/2024.03.14.585103v2)
-*   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. The output is the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen at a specific point (selected epitope patch from step 1). You have the possibility also to annotate nanobody residues potentially involved in contacts with the epitope.
-*   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFDiffusionAntibody_colab.ipynb)
-
-### 3. Sequence Reconstruction of nanobody interfacial residues
+*   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. You have the possibility also to annotate nanobody residues (but not side-chains!) potentially involved in contacts with the epitope.
+*   **Colab Notebook:** [![2_RFantibody_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFDiffusionAntibody_colab.ipynb)
+*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen at a specific point (selected epitope patch from step 1) ("....pdb").
+    *   **Annotation File:** [RFAntibody_redesign_01.pdb](./Example_output/Step_1_annotations.txt)
+    *   **Structure Design File:** [RFAntibody_redesign_01.pdb](./Example_output/Nanobody_Design_0.pdb)
+    
+### 3. Fixed-backbone Sequence reconstruction of nanobody interfacial residues
 
 *   **Tool:** ProteinMPNN [paper link](https://www.science.org/doi/10.1126/science.add2187)
 *   **Purpose:** To reconstruct the sequence of CDRs and FWs regions at the nanobody-target interface. This step is necessary to rebuild a 3D model, as RFantibody masks interfacial residues as glycines (it is focused on backbone reconstruction, it did not generate full atoms models!).
-*   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/3_ProteinMPNN_colab.ipynb)
-
-### 4. Complex prediction of ProteinMPNN optimized sequence
-
-*   **Tool:** SwissModel (webserver) [paper link](https://academic.oup.com/nar/article/46/W1/W296/5000024)
-*   **Purpose:** A 3D model of the designed nanobody needs to be created, replacing the original nanobody sequence with the top scoring ProteinMPNN design. THis step can be accomplished with any structure predictor that can leverage 3D template information stored in the PDB file of the RFantibody design (downloaded at step 2); SwissModel is used through a webserver, as free Colab GPU resources do not fit with the time required for this task, especially if the target has more than 300 AA.
-*   **Instructions:** access SwissModel website for template-based structure prediction at this [link](https://swissmodel.expasy.org/interactive#structure). Please copy-paste the nanobody sequence of the best ProteinMPNN design, than toggle "Add Hetero target" and add the sequence of the target protein. After that, please toggle "Add template FIle..." and upload the PDB structure given as input to the previous step 3. The final generated model will be used as input in the next step 5.
+*   **Colab Notebook:** [![3_ProteinMPNN_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/3_ProteinMPNN_colab.ipynb)
+*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model.pdb").
+    *   **Structure Design with redesigned interface File:** [design_15_model.pdb](./Example_output/design_15_model.pdb)
 
 
-### 5. CDRs Sequence Reconstruction
+### 4. Side-chain packing of ProteinMPNN optimized design
+
+*   **Tool:** PIPPack [paper link](https://onlinelibrary.wiley.com/doi/10.1002/prot.26705)
+*   **Purpose:** To build and optimize the side-chains atoms of the ProteinMPNN optimized design.
+*   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4.PIPPack_colab.ipynb)
+*   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model_pippack_ensemble.pdb").
+    *   **Structure Design with redesigned interface File:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
+
+
+### 5. CDRs Sequence Reconstruction with a CDR-specialized model
 
 *   **Tool:** AntiFold [paper link](https://academic.oup.com/bioinformaticsadvances/article/5/1/vbae202/8090019)
 *   **Purpose:** To reconstruct the sequence of CDRs regions with a CDR-specialized model. This step is necessary to get the final nanobody design sequence to build a final 3D model with optimized CDRs.
-*   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/5_Antifold_colab.ipynb)
+*   **Colab Notebook:** [![5_Antifold_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/5_Antifold_colab.ipynb)
+*   **Example output:** the final nanobody design sequence with the best score (the lower the better in this case!). The sequence is in a fasta file togheter with the sequence of the antigen, ready for the next step ("design_3_score_0.4895.fasta").
+    *   **Structure Design with redesigned interface File:** [design_3_score_0.4895.pdb](./Example_output/design_3_score_0.4895.fasta)
+
 
 ### 6. Complex Reprediction for Quality Assessment
 
 *   **Tool:** gapTrick [paper link](https://www.biorxiv.org/content/10.1101/2025.01.31.635911v2)
-*   **Purpose:** To use the top scoring AntiFold nanobody sequence for getting the full-atom 3D model of the *de novo* designed nanobody-target complex. This step assesses the quality of the designed interfacial residues and identifies key non-covalent contacts (e.g., hydrophobic contacts, hydrogen bonds, salt bridges).
-*   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/6_gapTrick_colab.ipynb)
+*   **Purpose:** To use the top scoring AntiFold nanobody sequence for getting the full-atom 3D model of the *de novo* designed nanobody-target complex. This step assesses the quality of the designed interfacial residues and identifies key non-covalent contacts (e.g., hydrophobic contacts, hydrogen bonds, salt bridges) if AlphaFold "thinks" they exist. Inputs are the output of previous step and the PDB output of step 4 ([design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)) that will be used as template to help in the prediction
+*   **Colab Notebook:** [![6_gapTrick_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/6_gapTrick_colab.ipynb)
+*   **Example output:** the final pdb of the nanobody design ("ranked_0.pdb"). The interface in Google Colab will provide info on the existence of reliable inter-protein contacts. ("design_3_score_0.4895.fasta").
+    *   **Structure Design with redesigned interface File:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
+
 
 ---
-## Screening and Further Validation of *de novo* designed nanobody binders
+## 7. Screening and Further Validation of *de novo* designed nanobody binders
 
 Further steps of validation are crucial for increasing the likelihood of success in experimental settings, both *in vitro* and *in vivo*.
-In order to have a sufficient n° of designs for a successful experimental screening, it is advisable to generate at least **≈1000** *in silico* designs (full-atom structure) and use them as input to pass further validation and filtering steps.
-These steps may use one or more of the following (the list is not comprehensive, just for giving some examples):
+In order to have a sufficient n° of designs for a successful experimental screening, it is advisable to generate at least **≈1000** *in silico* designs (full-atom structure) and use them as input to pass further validation and filtering steps, as these will likely result in 95% of designs to fail leaving your computer.
+These steps may use one or more of the following (the list of options for each approach is not comprehensive, it is just for giving some examples):
 
 *   **Interaction confidence from deep learning approaches**
-    *   AlphaFold-Multimer Local Interaction Score (AFM-LIS) (https://github.com/flyark/AFM-LIS)
+    *   Use AlphaFold2 (AF2), AlphaFold-Multimer or AF3 to repredict the complex without the use of templates (used by gapTrick) and evaluate the models for consistency with the design structure and fexibility-sensitive confidence scores( e.g, [Local Interaction Score](https://github.com/flyark/AFM-LIS) or [ipSAE](https://doi.org/10.1101/2025.02.10.637595))
 *   **Empirical-physics scores:**
     *   Protein-protein docking scores (e.g., HADDOCK, Rosetta-ddG, Fold-X)
-    *   Geometric scores on surface and non-covalent interactions at interface (e.g., Rosetta interface analysis tools, dG/dSASA, packstat or n° unsaturated H-bonds)
+    *   Geometric scores using surface and non-covalent interactions features at interface (e.g., Rosetta interface analysis tools, dG/dSASA, packstat or n° unsaturated H-bonds)
 *   **Physics-based Assessment:**
     *   Molecular Dynamics simulations (> 100 ns) to assess complex stability (e.g., RMSD metric using GROMACS, AMBER, etc...)
     *   Enhanced sampling methods, to generate the conformational free-energy landscape (e.g., metadynamics with PLUMED or coarse-grained/all-atom hybrid simulations with Prody)
