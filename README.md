@@ -26,7 +26,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 ---
 
 ## Pipeline
-
+---
 ### 1. Candidate epitopes Prediction and nanobody CDRs identification
 
 <table>
@@ -52,7 +52,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Example output:** The file containing annotations of target patches and CDRs ("Step_1_annotations.txt") and the input PDB of nanobody with CDRs pre-annotated ("nanobody_scaffold_with_CDRs.pdb").
     *   **Annotation File:** [Step_1_annotations.txt](./Example_output/Step_1_annotations.txt)
     *   **Nanobody PDB File:** [nanobody_scaffold_with_CDRs.pdb](./Example_output/nanobody_scaffold_with_CDRs.pdb)
-
+---
 ### 2. *Nanobody de novo* CDRs Design
 
 <table>
@@ -70,10 +70,11 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Tool:** RFantibody [paper link](https://www.biorxiv.org/content/10.1101/2024.03.14.585103v2)
 *   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. You have the possibility also to annotate nanobody residues (but not side-chains!) potentially involved in contacts with the epitope.
 *   **Colab Notebook:** [![2_RFantibody_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFDiffusionAntibody_colab.ipynb)
-*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen at a specific point (selected epitope patch from step 1) ("....pdb").
-    *   **Annotation:** [Interacting_residues_Nanobody_Design_0.txt](./Example_output/Interacting_residues_Nanobody_Design_0.txt)
+*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen ("Nanobody_Design_0.pdb") at the specified patch (designated in step 1), with interacting nanobody residues annotated ("Interacting_residues_Nanobody_Design_0.txt").
     *   **Structure Design:** [Nanobody_Design_0.pdb](./Example_output/Nanobody_Design_0.pdb)
-    
+    *   **Annotation:** [Interacting_residues_Nanobody_Design_0.txt](./Example_output/Interacting_residues_Nanobody_Design_0.txt)
+
+---   
 ### 3. Fixed-backbone Sequence reconstruction of nanobody interfacial residues
 
 <table>
@@ -94,7 +95,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model.pdb").
     *   **Structure Design with ProteinMPNN redesigned interface:** [design_15_model.pdb](./Example_output/design_15_model.pdb)
 
-
+---
 ### 4. Side-chain packing of ProteinMPNN optimized design
 
 <table>
@@ -115,7 +116,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model_pippack_ensemble.pdb").
     *   **Full-atom structure of ProteinMPNN redesign with repacked side-chains:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
 
-
+---
 ### 5. CDRs Sequence Reconstruction with a CDR-specialized model
 
 <table>
@@ -136,7 +137,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Example output:** the final nanobody design sequence with the best score (the lower the better in this case!). The sequence is in a fasta file togheter with the sequence of the antigen, ready for the next step ("design_3_score_0.4895.fasta").
     *   **Fasta sequence of the nanobody after optimized CDRs:** [design_3_score_0.4895.pdb](./Example_output/design_3_score_0.4895.fasta)
 
-
+---
 ### 6. Complex Reprediction for Quality Assessment
 
 <table>
