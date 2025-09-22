@@ -13,7 +13,7 @@ This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 
 ## Overview
 
-The workshop starts from the 3D structure of two input PDBs, one of the target and one of the scaffold nanobody. Most of the steps are performed using Google Colab notebooks, provided in this repository.
+The workshop starts from the 3D structure of two input PDBs, one of the target and one of the scaffold nanobody. The steps are performed using Google Colab notebooks, provided in this repository.
 
 **Note on File Access:** The links to files in this README (like `7z1b.pdb`) are relative paths. If you click on them in a browser while logged into GitHub with access to this repository, you will see the file's content. To use the file, you will need to manually click the "Download raw file" <img src="Images/Download_symbol.png" alt="Download button" width="200"/> top-right button on the file viewer page.
 
@@ -23,9 +23,6 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     *   **Example Target:** [7z1b.pdb](./Example_input/7z1b.pdb)
 *   **Scaffold:** A pre-selected nanobody structure to serve as the starting point for the (re)design.
     *   **Example nanobody scaffold:** [nanobody_scaffold.pdb](./Example_input/nanobody_scaffold.pdb)
----
-
-## Pipeline
 ---
 ### 1. Candidate epitopes Prediction and nanobody CDRs identification
 
