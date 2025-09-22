@@ -50,7 +50,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Colab Notebook:** [![1_Preparation_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/1_Preparation_colab.ipynb)
 *   **Example output:** The file containing annotations of target patches and CDRs ("Step_1_annotations.txt") and the input PDB of nanobody with CDRs pre-annotated ("nanobody_scaffold_with_CDRs.pdb").
     *   **Annotation File:** [Step_1_annotations.txt](./Example_output/Step_1_annotations.txt)
-    *   **Nanobody PDB File:** [Step_1_annotations.txt](./Example_output/nanobody_scaffold_with_CDRs.pdb)
+    *   **Nanobody PDB File:** [nanobody_scaffold_with_CDRs.pdb](./Example_output/nanobody_scaffold_with_CDRs.pdb)
 
 ### 2. *Nanobody de novo* CDRs Design
 
@@ -58,8 +58,8 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. You have the possibility also to annotate nanobody residues (but not side-chains!) potentially involved in contacts with the epitope.
 *   **Colab Notebook:** [![2_RFantibody_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFDiffusionAntibody_colab.ipynb)
 *   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen at a specific point (selected epitope patch from step 1) ("....pdb").
-    *   **Annotation File:** [RFAntibody_redesign_01.pdb](./Example_output/Step_1_annotations.txt)
-    *   **Structure Design File:** [RFAntibody_redesign_01.pdb](./Example_output/Nanobody_Design_0.pdb)
+    *   **Annotation File:** [Interacting_residues_Nanobody_Design_0.txt](./Example_output/Interacting_residues_Nanobody_Design_0.txt)
+    *   **Structure Design File:** [Nanobody_Design_0.pdb](./Example_output/Nanobody_Design_0.pdb)
     
 ### 3. Fixed-backbone Sequence reconstruction of nanobody interfacial residues
 
@@ -76,7 +76,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Purpose:** To build and optimize the side-chains atoms of the ProteinMPNN optimized design.
 *   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4.PIPPack_colab.ipynb)
 *   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model_pippack_ensemble.pdb").
-    *   **Structure Design with redesigned interface File:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
+    *   **Full-atom structure Design with repacked side-chains:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
 
 
 ### 5. CDRs Sequence Reconstruction with a CDR-specialized model
@@ -85,7 +85,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Purpose:** To reconstruct the sequence of CDRs regions with a CDR-specialized model. This step is necessary to get the final nanobody design sequence to build a final 3D model with optimized CDRs.
 *   **Colab Notebook:** [![5_Antifold_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/5_Antifold_colab.ipynb)
 *   **Example output:** the final nanobody design sequence with the best score (the lower the better in this case!). The sequence is in a fasta file togheter with the sequence of the antigen, ready for the next step ("design_3_score_0.4895.fasta").
-    *   **Structure Design with redesigned interface File:** [design_3_score_0.4895.pdb](./Example_output/design_3_score_0.4895.fasta)
+    *   **Fasta sequence of the Design with optimized CDRs:** [design_3_score_0.4895.pdb](./Example_output/design_3_score_0.4895.fasta)
 
 
 ### 6. Complex Reprediction for Quality Assessment
@@ -93,8 +93,9 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Tool:** gapTrick [paper link](https://www.biorxiv.org/content/10.1101/2025.01.31.635911v2)
 *   **Purpose:** To use the top scoring AntiFold nanobody sequence for getting the full-atom 3D model of the *de novo* designed nanobody-target complex. This step assesses the quality of the designed interfacial residues and identifies key non-covalent contacts (e.g., hydrophobic contacts, hydrogen bonds, salt bridges) if AlphaFold "thinks" they exist. Inputs are the output of previous step and the PDB output of step 4 ([design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)) that will be used as template to help in the prediction
 *   **Colab Notebook:** [![6_gapTrick_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/6_gapTrick_colab.ipynb)
-*   **Example output:** the final pdb of the nanobody design ("ranked_0.pdb"). The interface in Google Colab will provide info on the existence of reliable inter-protein contacts. ("design_3_score_0.4895.fasta").
-    *   **Structure Design with redesigned interface File:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
+*   **Example output:** the final pdb of the nanobody design ("ranked_0.pdb"). The interface in Google Colab will provide info on the existence of reliable inter-protein contacts, displayed in a distogram ("distogram.png").
+    *   **Final repredicted Structure Design:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
+    *   **Distogram to assess reliable inter-protein contacts:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
 
 
 ---
