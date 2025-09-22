@@ -17,7 +17,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 **Note on File Access:** The links to files in this README (like `7z1b.pdb`) are relative paths. If you click on them in a browser while logged into GitHub with access to this repository, you will see the file's content. To use the file, you will need to manually click the "Download raw file" <img src="Images/Download_symbol.png" alt="Download button" width="200"/> top-right button on the file viewer page.
 
-## Target and Scaffold Files
+## Target and nanobody scaffold files
 
 *   **Target:** An arbitrary protein structure (in PDB format) of your choice.
     *   **Example Target:** [7z1b.pdb](./Example_input/7z1b.pdb)
@@ -25,7 +25,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
     *   **Example nanobody scaffold:** [nanobody_scaffold.pdb](./Example_input/nanobody_scaffold.pdb)
 ---
 
-## Design Pipeline
+## Pipeline
 
 ### 1. Candidate epitopes Prediction and nanobody CDRs identification
 
@@ -100,7 +100,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 <table>
   <tr>
     <td align="center">
-      <img src="Images/pippack_architecture.png" alt="Side-chain packing" width="400"/>
+      <img src="Images/pippack_architecture.png" alt="Side-chain packing" width="800"/>
       <br>
       <em>Building side-chain atoms and pack them (predict torsion chi angles)</em>
     </td>
@@ -121,7 +121,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 <table>
   <tr>
     <td align="center">
-      <img src="Images/AntiFold.jpeg" alt="CDRs sequence optimization" width="400"/>
+      <img src="Images/AntiFold.jpeg" alt="CDRs sequence optimization" width="600"/>
       <br>
       <em>CDRs sequence optimization</em>
     </td>
@@ -142,7 +142,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 <table>
   <tr>
     <td align="center">
-      <img src="Images/GapTrick.png" alt="Example of unmasking AlphaFold template information over protein complexes given at input" width="400"/>
+      <img src="Images/GapTrick.png" alt="Example of unmasking AlphaFold template information over protein complexes given at input" width="600"/>
       <br>
       <em>Example of unmasking AlphaFold template information over protein complexes given at input</em>
     </td>
