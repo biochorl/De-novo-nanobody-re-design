@@ -10,6 +10,7 @@ It is actually made for demonstration and teaching, while being not adequate to 
 
 This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 *   **Event Link:** [https://indico.ijs.si/event/2966/](https://indico.ijs.si/event/2966/)
+* A brief introduction on AI-assisted protein design is available at this [link](./Misc/AI-assited_design.ppt)
 
 ## Overview
 
@@ -20,7 +21,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 ## Target and nanobody scaffold files
 
 *   **Target:** An arbitrary protein structure (in PDB format) of your choice.
-    *   **Example Target:** [7z1b.pdb](./Example_input/7z1b.pdb)
+    *   **Example Target (SarsCov2 RBD):** [7z1b.pdb](./Example_input/7z1b.pdb)
 *   **Scaffold:** A pre-selected nanobody structure to serve as the starting point for the (re)design.
     *   **Example nanobody scaffold:** [nanobody_scaffold.pdb](./Example_input/nanobody_scaffold.pdb)
 ---
@@ -185,4 +186,4 @@ Most of the Google colaboratories were developed by customizing other colabs, re
 
 ## Contact
 
-For any questions, suggestions, or issues, please open an issue in this GitHub repository or contact me at [marco.orlando1991@live.it](mailto:marco.orlando1991@live.it) or [marco.orlando1991@ung.si](mailto:marco.orlando1991@ung.si).
+For any questions, suggestions, or issues, please open an issue in this GitHub repository or contact me at [marco.orlando1991@live.it](mailto:marco.orlando1991@live.it) or [marco.orlando1991@ung.si](mailto:marco.orlando@ung.si).
