@@ -18,7 +18,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 **Note on File Access:** The links to files in this README (like [7z1b.pdb](./Example_input/7z1b.pdb)) are relative paths. If you click on them in a browser while logged into GitHub with access to this repository, you will see the file's content. To use the file, you will need to manually click the "Download raw file" <img src="Images/Download_symbol.png" alt="Download button" width="200"/> top-right button on the file viewer page.
 
-## Target and nanobody scaffold files
+## Target and nanobody scaffold files (initial inputs)
 
 *   **Target:** An arbitrary protein structure (in PDB format) of your choice.
     *   **Example Target (SarsCov2 RBD):** [7z1b.pdb](./Example_input/7z1b.pdb)
