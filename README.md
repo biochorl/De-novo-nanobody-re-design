@@ -10,7 +10,7 @@ It is actually made for demonstration and teaching, while being not adequate to 
 
 This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 *   **Event Link:** [https://indico.ijs.si/event/2966/](https://indico.ijs.si/event/2966/)
-* A brief introduction on AI-assisted protein design is available at this [link](./De-novo_design_intro.pdf)
+* A brief introduction on AI-assisted protein design is available at this [link](./Misc/De-novo_design_intro.pdf)
 
 ## Overview
 
@@ -90,8 +90,8 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Tool:** ProteinMPNN [paper link](https://www.science.org/doi/10.1126/science.add2187)
 *   **Purpose:** To reconstruct the sequence of CDRs and FWs regions at the nanobody-target interface. This step is necessary to rebuild a 3D model, as RFantibody masks interfacial residues as glycines (it is focused on backbone reconstruction, it did not generate full atoms models!).
 *   **Colab Notebook:** [![3_ProteinMPNN_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/3_ProteinMPNN_colab.ipynb)
-*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model.pdb").
-    *   **Structure Design with ProteinMPNN redesigned interface:** [design_15_model.pdb](./Example_output/design_15_model.pdb)
+*   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("ProteinMPNN_design_4.pdb").
+    *   **Structure Design with ProteinMPNN redesigned interface:** [ProteinMPNN_design_4.pdb](./Example_output/ProteinMPNN_design_4.pdb)
 
 ---
 ### 4. Side-chain packing of ProteinMPNN optimized design
@@ -111,8 +111,8 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Tool:** PIPPack [paper link](https://onlinelibrary.wiley.com/doi/10.1002/prot.26705)
 *   **Purpose:** To build and optimize the side-chains atoms of the ProteinMPNN optimized design.
 *   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4_PIPPack_colab.ipynb)
-*   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model_pippack_ensemble.pdb").
-    *   **Full-atom structure of ProteinMPNN redesign with repacked side-chains:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
+*   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("ProteinMPNN_design_4_pippack_ensemble.pdb").
+    *   **Full-atom structure of ProteinMPNN redesign with repacked side-chains:** [ProteinMPNN_design_4_pippack_ensemble.pdb](./Example_output/ProteinMPNN_design_4_pippack_ensemble.pdb)
 
 ---
 ### 5. CDRs Sequence Reconstruction with a CDR-specialized model
@@ -132,8 +132,8 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Tool:** AntiFold [paper link](https://academic.oup.com/bioinformaticsadvances/article/5/1/vbae202/8090019)
 *   **Purpose:** To reconstruct the sequence of CDRs regions with a CDR-specialized model. This step is necessary to get the final nanobody design sequence to build a final 3D model with optimized CDRs.
 *   **Colab Notebook:** [![5_Antifold_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/5_Antifold_colab.ipynb)
-*   **Example output:** the final nanobody design sequence with the best score (the lower the better in this case!). The sequence is in a fasta file togheter with the sequence of the antigen, ready for the next step ("design_3_score_0.4895.fasta").
-    *   **Fasta sequence of the nanobody after optimized CDRs:** [design_3_score_0.4895.pdb](./Example_output/design_3_score_0.4895.fasta)
+*   **Example output:** the final nanobody design sequence with the best score (the lower the better in this case!). The sequence is in a fasta file togheter with the sequence of the antigen, ready for the next step ("design_3_score_0.4623.fasta").
+    *   **Fasta sequence of the nanobody after optimized CDRs:** [design_3_score_0.4623.pdb](./Example_output/design_3_score_0.4623.fasta)
 
 ---
 ### 6. Complex Reprediction for Quality Assessment
@@ -155,7 +155,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Colab Notebook:** [![6_gapTrick_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/6_gapTrick_colab.ipynb)
 *   **Example output:** the final pdb of the nanobody design ("ranked_0.pdb"). The interface in Google Colab will provide info on the existence of reliable inter-protein contacts, displayed in a distogram ("distogram.png").
     *   **Repredicted Structure of the CDRs-optimized design:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
-    *   **Distogram to assess reliable inter-protein contacts:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
+    *   **Distogram to assess reliable inter-protein contacts:** [ranked_0.pdb](./Example_output/distogram.png)
 
 
 ---
