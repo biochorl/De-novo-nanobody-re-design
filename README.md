@@ -67,7 +67,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 *   **Tool:** RFantibody [paper link](https://www.biorxiv.org/content/10.1101/2024.03.14.585103v2)
 *   **Purpose:** To design alternative complete CDR conformations. The CDRs are the most variable parts of the nanobody and are primarily responsible for binding to the target. You have the possibility also to annotate nanobody residues (but not side-chains!) potentially involved in contacts with the epitope.
-*   **Colab Notebook:** [![2_RFantibody_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFDiffusionAntibody_colab.ipynb)
+*   **Colab Notebook:** [![2_RFantibody_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/2_RFantibody_colab.ipynb)
 *   **Example output:** the backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen ("Nanobody_Design_0.pdb") at the specified patch (designated in step 1), with interacting nanobody residues annotated ("Interacting_residues_Nanobody_Design_0.txt").
     *   **Structure Design:** [Nanobody_Design_0.pdb](./Example_output/Nanobody_Design_0.pdb)
     *   **Annotation:** [Interacting_residues_Nanobody_Design_0.txt](./Example_output/Interacting_residues_Nanobody_Design_0.txt)
