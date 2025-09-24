@@ -10,7 +10,7 @@ It is actually made for demonstration and teaching, while being not adequate to 
 
 This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
 *   **Event Link:** [https://indico.ijs.si/event/2966/](https://indico.ijs.si/event/2966/)
-* A brief introduction on AI-assisted protein design is available at this [link](./Misc/AI-assited_design.ppt)
+* A brief introduction on AI-assisted protein design is available at this [link](./De-novo_design_intro.pdf)
 
 ## Overview
 
