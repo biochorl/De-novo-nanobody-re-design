@@ -155,7 +155,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 *   **Colab Notebook:** [![6_gapTrick_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/6_gapTrick_colab.ipynb)
 *   **Example output:** the final pdb of the nanobody design ("ranked_0.pdb"). The interface in Google Colab will provide info on the existence of reliable inter-protein contacts, displayed in a distogram ("distogram.png").
     *   **Repredicted Structure of the CDRs-optimized design:** [ranked_0.pdb](./Example_output/ranked_0.pdb)
-    *   **Distogram to assess reliable inter-protein contacts:** [ranked_0.pdb](./Example_output/distogram.png)
+    *   **Distogram to assess reliable inter-protein contacts:** [distogram.png](./Example_output/distogram.png)
 
 
 ---
