@@ -110,7 +110,7 @@ The workshop starts from the 3D structure of two input PDBs, one of the target a
 
 *   **Tool:** PIPPack [paper link](https://onlinelibrary.wiley.com/doi/10.1002/prot.26705)
 *   **Purpose:** To build and optimize the side-chains atoms of the ProteinMPNN optimized design.
-*   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4.PIPPack_colab.ipynb)
+*   **Colab Notebook:** [![4.PIPPack_colab.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/margio91/De-novo-nanobody-re-design/blob/main/4_PIPPack_colab.ipynb)
 *   **Example output:** the full atom backbone structure of the complex between the (re)designed nanobody interacting with the target protein antigen with optimized CDRs and FRs at the interface ("design_15_model_pippack_ensemble.pdb").
     *   **Full-atom structure of ProteinMPNN redesign with repacked side-chains:** [design_15_model_pippack_ensemble.pdb](./Example_output/design_15_model_pippack_ensemble.pdb)
 
