@@ -186,4 +186,4 @@ Most of the Google colaboratories were developed by customizing other colabs, re
 
 ## Contact
 
-For any questions, suggestions, or issues, please open an issue in this GitHub repository or contact me at [marco.orlando1991@live.it](mailto:marco.orlando1991@live.it) or [marco.orlando1991@ung.si](mailto:marco.orlando@ung.si).
+For any questions, suggestions, or issues, please open an issue in this GitHub repository or contact me at [marco.orlando1991@live.it](mailto:marco.orlando1991@live.it) or [marco.orlando@ung.si](mailto:marco.orlando@ung.si).
