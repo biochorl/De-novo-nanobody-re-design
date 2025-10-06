@@ -8,7 +8,7 @@ This repository contains the computational workflow for the *de novo* (re)design
 The pipeline is developed to use Google Colab resources and it is adequate for people with little knowledge on protein *de novo* design tools and limited structural biology background.
 It is actually made for demonstration and teaching, while being not adequate to scale for a production-level *in silico* screening 
 
-This material has been used during the **Nanobody Workshop (22-26 Sep 2025)**.
+This material has been used during the **Nanobody Workshop (22-26 Sep 2025)** at the **University of Nova Gorica**, Rozna Dolina campus.
 *   **Event Link:** [https://indico.ijs.si/event/2966/](https://indico.ijs.si/event/2966/)
 * A brief introduction on AI-assisted protein design is available at this [link](./Misc/De-novo_design_intro.pdf)
 
