@@ -182,7 +182,7 @@ These steps may use one or more of the following (the list of options for each a
 ---
 ## Acknowledgements
 
-Most of the Google colaboratories were developed by customizing other colabs, referenced in the corresponding file. I linked the paper or the original source describing all the different methods. This repo was written with help of [Google Gemini-CLI](https://github.com/google-gemini/gemini-cli).
+Most of the Google colaboratories were developed by customizing other colabs, referenced in the corresponding file. I linked the paper or the original source describing all the different methods.
 
 ## Contact
 
